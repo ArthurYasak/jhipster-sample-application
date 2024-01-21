@@ -7,7 +7,18 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Сущности",
-        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
+        "materialsFile": "Materials File",
+        "materialsFileLoader": "Materials File Loader",
+        "themeFile": "Theme File",
+        "themeFileCreator": "Theme File Creator",
+        "testEntity": "Test Entity",
+        "testLoader": "Test Loader",
+        "testCreator": "Test Creator",
+        "tester": "Tester",
+        "testUser": "Test User",
+        "reportSender": "Report Sender",
+        "statisticGenerator": "Statistic Generator"
       },
       "account": {
         "main": "Профиль",

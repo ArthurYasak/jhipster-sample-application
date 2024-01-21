@@ -1,0 +1,25 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "materialsFileLoader": {
+      "home": {
+        "title": "Materials File Loaders",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Materials File Loader",
+        "createOrEditLabel": "Создать или отредактировать Materials File Loader",
+        "notFound": "Materials File Loaders не найдено"
+      },
+      "created": "Новый Materials File Loader создан с идентификатором {{ param }}",
+      "updated": "Materials File Loader обновлен с идентификатором {{ param }}",
+      "deleted": "Materials File Loader удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Materials File Loader {{ id }}?"
+      },
+      "detail": {
+        "title": "Materials File Loader"
+      },
+      "id": "ID",
+      "filesAmount": "Files Amount",
+      "materialsFile": "Materials File"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity TestUser.
+    -->
+    <changeSet id="20240121063748-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="report_sender_id"
+                                 baseTableName="test_user"
+                                 constraintName="fk_test_user__report_sender_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="report_sender"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="statistic_generator_id"
+                                 baseTableName="test_user"
+                                 constraintName="fk_test_user__statistic_generator_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="statistic_generator"
+                                 />
+    </changeSet>
+</databaseChangeLog>

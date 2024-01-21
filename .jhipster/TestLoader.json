@@ -1,0 +1,23 @@
+{
+  "annotations": {
+    "changelogDate": "20240121063448"
+  },
+  "applications": "*",
+  "entityTableName": "test_loader",
+  "fields": [
+    {
+      "fieldName": "testsAmount",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "TestLoader",
+  "relationships": [
+    {
+      "otherEntityName": "testEntity",
+      "relationshipName": "testEntity",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

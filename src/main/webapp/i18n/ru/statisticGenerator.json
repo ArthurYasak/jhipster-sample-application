@@ -1,0 +1,25 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "statisticGenerator": {
+      "home": {
+        "title": "Statistic Generators",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Statistic Generator",
+        "createOrEditLabel": "Создать или отредактировать Statistic Generator",
+        "notFound": "Statistic Generators не найдено"
+      },
+      "created": "Новый Statistic Generator создан с идентификатором {{ param }}",
+      "updated": "Statistic Generator обновлен с идентификатором {{ param }}",
+      "deleted": "Statistic Generator удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Statistic Generator {{ id }}?"
+      },
+      "detail": {
+        "title": "Statistic Generator"
+      },
+      "id": "ID",
+      "generatedReportsAmount": "Generated Reports Amount",
+      "testUser": "Test User"
+    }
+  }
+}

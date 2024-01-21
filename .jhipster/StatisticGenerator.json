@@ -1,0 +1,23 @@
+{
+  "annotations": {
+    "changelogDate": "20240121063948"
+  },
+  "applications": "*",
+  "entityTableName": "statistic_generator",
+  "fields": [
+    {
+      "fieldName": "generatedReportsAmount",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "StatisticGenerator",
+  "relationships": [
+    {
+      "otherEntityName": "testUser",
+      "relationshipName": "testUser",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

@@ -1,0 +1,25 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "materialsFileLoader": {
+      "home": {
+        "title": "Materials File Loaders",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Materials File Loader",
+        "createOrEditLabel": "Create or edit a Materials File Loader",
+        "notFound": "No Materials File Loaders found"
+      },
+      "created": "A new Materials File Loader is created with identifier {{ param }}",
+      "updated": "A Materials File Loader is updated with identifier {{ param }}",
+      "deleted": "A Materials File Loader is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Materials File Loader {{ id }}?"
+      },
+      "detail": {
+        "title": "Materials File Loader"
+      },
+      "id": "ID",
+      "filesAmount": "Files Amount",
+      "materialsFile": "Materials File"
+    }
+  }
+}

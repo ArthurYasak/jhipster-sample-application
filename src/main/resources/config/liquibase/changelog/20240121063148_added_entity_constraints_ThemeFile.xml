@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity ThemeFile.
+    -->
+    <changeSet id="20240121063148-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="materials_file_id"
+                                 baseTableName="theme_file"
+                                 constraintName="fk_theme_file__materials_file_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="materials_file"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="theme_file_creator_id"
+                                 baseTableName="theme_file"
+                                 constraintName="fk_theme_file__theme_file_creator_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="theme_file_creator"
+                                 />
+    </changeSet>
+</databaseChangeLog>

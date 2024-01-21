@@ -1,0 +1,23 @@
+{
+  "annotations": {
+    "changelogDate": "20240121063548"
+  },
+  "applications": "*",
+  "entityTableName": "test_creator",
+  "fields": [
+    {
+      "fieldName": "testsAmount",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "TestCreator",
+  "relationships": [
+    {
+      "otherEntityName": "testEntity",
+      "relationshipName": "testEntity",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

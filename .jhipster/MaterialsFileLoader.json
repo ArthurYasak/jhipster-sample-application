@@ -1,0 +1,23 @@
+{
+  "annotations": {
+    "changelogDate": "20240121063048"
+  },
+  "applications": "*",
+  "entityTableName": "materials_file_loader",
+  "fields": [
+    {
+      "fieldName": "filesAmount",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "MaterialsFileLoader",
+  "relationships": [
+    {
+      "otherEntityName": "materialsFile",
+      "relationshipName": "materialsFile",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

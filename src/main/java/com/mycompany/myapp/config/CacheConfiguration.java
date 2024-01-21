@@ -48,6 +48,26 @@ public class CacheConfiguration {
             createCache(cm, com.mycompany.myapp.domain.User.class.getName());
             createCache(cm, com.mycompany.myapp.domain.Authority.class.getName());
             createCache(cm, com.mycompany.myapp.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.mycompany.myapp.domain.MaterialsFile.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.MaterialsFileLoader.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.MaterialsFileLoader.class.getName() + ".materialsFiles");
+            createCache(cm, com.mycompany.myapp.domain.ThemeFile.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.ThemeFileCreator.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.ThemeFileCreator.class.getName() + ".themeFiles");
+            createCache(cm, com.mycompany.myapp.domain.TestEntity.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.TestEntity.class.getName() + ".testUsers");
+            createCache(cm, com.mycompany.myapp.domain.TestLoader.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.TestLoader.class.getName() + ".testEntities");
+            createCache(cm, com.mycompany.myapp.domain.TestCreator.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.TestCreator.class.getName() + ".testEntities");
+            createCache(cm, com.mycompany.myapp.domain.Tester.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Tester.class.getName() + ".testEntities");
+            createCache(cm, com.mycompany.myapp.domain.TestUser.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.TestUser.class.getName() + ".testEntities");
+            createCache(cm, com.mycompany.myapp.domain.ReportSender.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.ReportSender.class.getName() + ".testUsers");
+            createCache(cm, com.mycompany.myapp.domain.StatisticGenerator.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.StatisticGenerator.class.getName() + ".testUsers");
             // jhipster-needle-ehcache-add-entry
         };
     }

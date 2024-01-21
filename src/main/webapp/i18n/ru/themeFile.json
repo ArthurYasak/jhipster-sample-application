@@ -1,0 +1,27 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "themeFile": {
+      "home": {
+        "title": "Theme Files",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Theme File",
+        "createOrEditLabel": "Создать или отредактировать Theme File",
+        "notFound": "Theme Files не найдено"
+      },
+      "created": "Новый Theme File создан с идентификатором {{ param }}",
+      "updated": "Theme File обновлен с идентификатором {{ param }}",
+      "deleted": "Theme File удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Theme File {{ id }}?"
+      },
+      "detail": {
+        "title": "Theme File"
+      },
+      "id": "ID",
+      "theme": "Theme",
+      "materialsFile": "Materials File",
+      "themeFileCreator": "Theme File Creator",
+      "testEntity": "Test Entity"
+    }
+  }
+}

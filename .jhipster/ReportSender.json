@@ -1,0 +1,23 @@
+{
+  "annotations": {
+    "changelogDate": "20240121063848"
+  },
+  "applications": "*",
+  "entityTableName": "report_sender",
+  "fields": [
+    {
+      "fieldName": "emailList",
+      "fieldType": "String"
+    }
+  ],
+  "name": "ReportSender",
+  "relationships": [
+    {
+      "otherEntityName": "testUser",
+      "relationshipName": "testUser",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}
