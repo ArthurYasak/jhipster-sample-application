@@ -59,8 +59,8 @@ relationship ManyToOne {
 }
 
 relationship OneToOne {
-	ThemeFile{MaterialsFile} to MaterialsFile{ThemeFile}
-    TestEntity{ThemeFile} to ThemeFile{TestEntity}
+	ThemeFile{MaterialsFile(materials)} to MaterialsFile{ThemeFile(theme)}
+    TestEntity{ThemeFile(theme)} to ThemeFile{TestEntity(question)}
 }
 
 paginate MaterialsFile, ThemeFile, TestEntity with pagination
