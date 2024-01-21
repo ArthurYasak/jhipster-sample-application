@@ -1,0 +1,67 @@
+entity MaterialsFile {
+	materials String 
+}
+
+entity MaterialsFileLoader {
+	filesAmount Integer
+}
+
+entity ThemeFile {
+	theme String
+}
+
+entity ThemeFileCreator {
+	filesAmount Integer
+}
+
+entity TestEntity {
+	testPoints String
+    result String 
+}
+
+entity TestLoader {
+	testsAmount Integer
+}
+
+entity TestCreator {
+	testsAmount Integer
+}
+
+entity Tester {
+	holdTests Integer
+}
+
+entity TestUser {
+	marks Float
+}
+
+entity ReportSender {
+	emailList String
+}
+
+entity StatisticGenerator {
+	generatedReportsAmount Integer
+}
+
+relationship ManyToMany {
+	TestEntity{TestUser} to TestUser{TestEntity}
+}
+
+relationship ManyToOne {
+	MaterialsFile to MaterialsFileLoader{MaterialsFile}
+    ThemeFile to ThemeFileCreator{ThemeFile}
+    TestEntity to TestCreator{TestEntity}
+    TestEntity to TestLoader{TestEntity}
+    TestEntity to Tester{TestEntity}
+    TestUser to ReportSender{TestUser}
+    TestUser to StatisticGenerator{TestUser}
+}
+
+relationship OneToOne {
+	ThemeFile{MaterialsFile} to MaterialsFile{ThemeFile}
+    TestEntity{ThemeFile} to ThemeFile{TestEntity}
+}
+
+paginate MaterialsFile, ThemeFile, TestEntity with pagination
+
+service MaterialsFile, ThemeFile, TestEntity with serviceImpl  
