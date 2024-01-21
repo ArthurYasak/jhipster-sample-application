@@ -6,8 +6,9 @@ import { ITestUser } from 'app/shared/model/test-user.model';
 
 export interface ITestEntity {
   id?: number;
+  question?: string | null;
   testPoints?: string | null;
-  result?: string | null;
+  result?: number | null;
   themeFile?: IThemeFile | null;
   testCreator?: ITestCreator | null;
   testLoader?: ITestLoader | null;

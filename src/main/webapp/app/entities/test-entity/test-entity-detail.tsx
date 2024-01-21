@@ -32,6 +32,12 @@ export const TestEntityDetail = () => {
           </dt>
           <dd>{testEntityEntity.id}</dd>
           <dt>
+            <span id="question">
+              <Translate contentKey="jhipsterSampleApplicationApp.testEntity.question">Question</Translate>
+            </span>
+          </dt>
+          <dd>{testEntityEntity.question}</dd>
+          <dt>
             <span id="testPoints">
               <Translate contentKey="jhipsterSampleApplicationApp.testEntity.testPoints">Test Points</Translate>
             </span>

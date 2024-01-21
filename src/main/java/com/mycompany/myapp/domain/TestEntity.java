@@ -25,11 +25,14 @@ public class TestEntity implements Serializable {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "question")
+    private String question;
+
     @Column(name = "test_points")
     private String testPoints;
 
     @Column(name = "result")
-    private String result;
+    private Integer result;
 
     @JsonIgnoreProperties(value = { "materialsFile", "themeFileCreator", "testEntity" }, allowSetters = true)
     @OneToOne(fetch = FetchType.LAZY)
@@ -73,6 +76,19 @@ public class TestEntity implements Serializable {
         this.id = id;
     }
 
+    public String getQuestion() {
+        return this.question;
+    }
+
+    public TestEntity question(String question) {
+        this.setQuestion(question);
+        return this;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
     public String getTestPoints() {
         return this.testPoints;
     }
@@ -86,16 +102,16 @@ public class TestEntity implements Serializable {
         this.testPoints = testPoints;
     }
 
-    public String getResult() {
+    public Integer getResult() {
         return this.result;
     }
 
-    public TestEntity result(String result) {
+    public TestEntity result(Integer result) {
         this.setResult(result);
         return this;
     }
 
-    public void setResult(String result) {
+    public void setResult(Integer result) {
         this.result = result;
     }
 
@@ -198,8 +214,9 @@ public class TestEntity implements Serializable {
     public String toString() {
         return "TestEntity{" +
             "id=" + getId() +
+            ", question='" + getQuestion() + "'" +
             ", testPoints='" + getTestPoints() + "'" +
-            ", result='" + getResult() + "'" +
+            ", result=" + getResult() +
             "}";
     }
 }

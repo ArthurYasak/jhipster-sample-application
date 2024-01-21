@@ -68,6 +68,9 @@ export const TestEntityUpdate = () => {
     if (values.id !== undefined && typeof values.id !== 'number') {
       values.id = Number(values.id);
     }
+    if (values.result !== undefined && typeof values.result !== 'number') {
+      values.result = Number(values.result);
+    }
 
     const entity = {
       ...testEntityEntity,
@@ -123,6 +126,13 @@ export const TestEntityUpdate = () => {
                   validate={{ required: true }}
                 />
               ) : null}
+              <ValidatedField
+                label={translate('jhipsterSampleApplicationApp.testEntity.question')}
+                id="test-entity-question"
+                name="question"
+                data-cy="question"
+                type="text"
+              />
               <ValidatedField
                 label={translate('jhipsterSampleApplicationApp.testEntity.testPoints')}
                 id="test-entity-testPoints"
