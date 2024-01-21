@@ -156,7 +156,7 @@ export const TestEntity = () => {
                   <td>{testEntity.testPoints}</td>
                   <td>{testEntity.result}</td>
                   <td>
-                    {testEntity.themeFile ? <Link to={`/theme-file/${testEntity.themeFile.id}`}>{testEntity.themeFile.id}</Link> : ''}
+                    {testEntity.themeFile ? <Link to={`/theme-file/${testEntity.themeFile.id}`}>{testEntity.themeFile.theme}</Link> : ''}
                   </td>
                   <td>
                     {testEntity.testCreator ? (

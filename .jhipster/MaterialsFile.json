@@ -21,6 +21,7 @@
       "relationshipType": "many-to-one"
     },
     {
+      "otherEntityField": "theme",
       "otherEntityName": "themeFile",
       "otherEntityRelationshipName": "materialsFile",
       "relationshipName": "themeFile",

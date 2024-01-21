@@ -2,20 +2,28 @@ package com.mycompany.myapp.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
+import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import com.mycompany.myapp.IntegrationTest;
 import com.mycompany.myapp.domain.ThemeFile;
 import com.mycompany.myapp.repository.ThemeFileRepository;
+import com.mycompany.myapp.service.ThemeFileService;
 import jakarta.persistence.EntityManager;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicLong;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
@@ -25,6 +33,7 @@ import org.springframework.transaction.annotation.Transactional;
  * Integration tests for the {@link ThemeFileResource} REST controller.
  */
 @IntegrationTest
+@ExtendWith(MockitoExtension.class)
 @AutoConfigureMockMvc
 @WithMockUser
 class ThemeFileResourceIT {
@@ -40,6 +49,12 @@ class ThemeFileResourceIT {
 
     @Autowired
     private ThemeFileRepository themeFileRepository;
+
+    @Mock
+    private ThemeFileRepository themeFileRepositoryMock;
+
+    @Mock
+    private ThemeFileService themeFileServiceMock;
 
     @Autowired
     private EntityManager em;
@@ -123,6 +138,23 @@ class ThemeFileResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(themeFile.getId().intValue())))
             .andExpect(jsonPath("$.[*].theme").value(hasItem(DEFAULT_THEME)));
+    }
+
+    @SuppressWarnings({ "unchecked" })
+    void getAllThemeFilesWithEagerRelationshipsIsEnabled() throws Exception {
+        when(themeFileServiceMock.findAllWithEagerRelationships(any())).thenReturn(new PageImpl(new ArrayList<>()));
+
+        restThemeFileMockMvc.perform(get(ENTITY_API_URL + "?eagerload=true")).andExpect(status().isOk());
+
+        verify(themeFileServiceMock, times(1)).findAllWithEagerRelationships(any());
+    }
+
+    @SuppressWarnings({ "unchecked" })
+    void getAllThemeFilesWithEagerRelationshipsIsNotEnabled() throws Exception {
+        when(themeFileServiceMock.findAllWithEagerRelationships(any())).thenReturn(new PageImpl(new ArrayList<>()));
+
+        restThemeFileMockMvc.perform(get(ENTITY_API_URL + "?eagerload=false")).andExpect(status().isOk());
+        verify(themeFileRepositoryMock, times(1)).findAll(any(Pageable.class));
     }
 
     @Test

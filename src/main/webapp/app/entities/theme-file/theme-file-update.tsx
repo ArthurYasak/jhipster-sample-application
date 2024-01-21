@@ -127,7 +127,7 @@ export const ThemeFileUpdate = () => {
                 {materialsFiles
                   ? materialsFiles.map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.id}
+                        {otherEntity.materials}
                       </option>
                     ))
                   : null}

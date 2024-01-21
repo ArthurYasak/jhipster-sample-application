@@ -52,7 +52,7 @@ export const TestEntityDetail = () => {
           <dt>
             <Translate contentKey="jhipsterSampleApplicationApp.testEntity.themeFile">Theme File</Translate>
           </dt>
-          <dd>{testEntityEntity.themeFile ? testEntityEntity.themeFile.id : ''}</dd>
+          <dd>{testEntityEntity.themeFile ? testEntityEntity.themeFile.theme : ''}</dd>
           <dt>
             <Translate contentKey="jhipsterSampleApplicationApp.testEntity.testCreator">Test Creator</Translate>
           </dt>

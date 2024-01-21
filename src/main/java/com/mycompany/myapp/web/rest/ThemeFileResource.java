@@ -140,20 +140,27 @@ public class ThemeFileResource {
      * {@code GET  /theme-files} : get all the themeFiles.
      *
      * @param pageable the pagination information.
+     * @param eagerload flag to eager load entities from relationships (This is applicable for many-to-many).
      * @param filter the filter of the request.
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of themeFiles in body.
      */
     @GetMapping("")
     public ResponseEntity<List<ThemeFile>> getAllThemeFiles(
         @org.springdoc.core.annotations.ParameterObject Pageable pageable,
-        @RequestParam(name = "filter", required = false) String filter
+        @RequestParam(name = "filter", required = false) String filter,
+        @RequestParam(name = "eagerload", required = false, defaultValue = "true") boolean eagerload
     ) {
         if ("testentity-is-null".equals(filter)) {
             log.debug("REST request to get all ThemeFiles where testEntity is null");
             return new ResponseEntity<>(themeFileService.findAllWhereTestEntityIsNull(), HttpStatus.OK);
         }
         log.debug("REST request to get a page of ThemeFiles");
-        Page<ThemeFile> page = themeFileService.findAll(pageable);
+        Page<ThemeFile> page;
+        if (eagerload) {
+            page = themeFileService.findAllWithEagerRelationships(pageable);
+        } else {
+            page = themeFileService.findAll(pageable);
+        }
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
         return ResponseEntity.ok().headers(headers).body(page.getContent());
     }

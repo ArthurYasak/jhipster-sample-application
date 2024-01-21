@@ -50,6 +50,14 @@ public interface ThemeFileService {
     List<ThemeFile> findAllWhereTestEntityIsNull();
 
     /**
+     * Get all the themeFiles with eager load of many-to-many relationships.
+     *
+     * @param pageable the pagination information.
+     * @return the list of entities.
+     */
+    Page<ThemeFile> findAllWithEagerRelationships(Pageable pageable);
+
+    /**
      * Get the "id" themeFile.
      *
      * @param id the id of the entity.

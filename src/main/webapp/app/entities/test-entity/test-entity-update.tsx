@@ -158,7 +158,7 @@ export const TestEntityUpdate = () => {
                 {themeFiles
                   ? themeFiles.map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.id}
+                        {otherEntity.theme}
                       </option>
                     ))
                   : null}

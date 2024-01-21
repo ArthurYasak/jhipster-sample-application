@@ -140,7 +140,7 @@ export const ThemeFile = () => {
                   <td>{themeFile.theme}</td>
                   <td>
                     {themeFile.materialsFile ? (
-                      <Link to={`/materials-file/${themeFile.materialsFile.id}`}>{themeFile.materialsFile.id}</Link>
+                      <Link to={`/materials-file/${themeFile.materialsFile.id}`}>{themeFile.materialsFile.materials}</Link>
                     ) : (
                       ''
                     )}
