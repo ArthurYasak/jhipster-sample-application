@@ -1,0 +1,25 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "tester": {
+      "home": {
+        "title": "Testers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tester",
+        "createOrEditLabel": "Create or edit a Tester",
+        "notFound": "No Testers found"
+      },
+      "created": "A new Tester is created with identifier {{ param }}",
+      "updated": "A Tester is updated with identifier {{ param }}",
+      "deleted": "A Tester is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tester {{ id }}?"
+      },
+      "detail": {
+        "title": "Tester"
+      },
+      "id": "ID",
+      "holdTests": "Hold Tests",
+      "testEntity": "Test Entity"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "annotations": {
+    "changelogDate": "20240121063348"
+  },
+  "applications": "*",
+  "entityTableName": "test_entity",
+  "fields": [
+    {
+      "fieldName": "testPoints",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "result",
+      "fieldType": "String"
+    }
+  ],
+  "name": "TestEntity",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "themeFile",
+      "otherEntityRelationshipName": "testEntity",
+      "relationshipName": "themeFile",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "testCreator",
+      "otherEntityRelationshipName": "testEntity",
+      "relationshipName": "testCreator",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "testLoader",
+      "otherEntityRelationshipName": "testEntity",
+      "relationshipName": "testLoader",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "tester",
+      "otherEntityRelationshipName": "testEntity",
+      "relationshipName": "tester",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "testUser",
+      "otherEntityRelationshipName": "testEntity",
+      "relationshipName": "testUser",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

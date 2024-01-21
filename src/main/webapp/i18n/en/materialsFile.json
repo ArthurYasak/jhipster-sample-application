@@ -1,0 +1,26 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "materialsFile": {
+      "home": {
+        "title": "Materials Files",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Materials File",
+        "createOrEditLabel": "Create or edit a Materials File",
+        "notFound": "No Materials Files found"
+      },
+      "created": "A new Materials File is created with identifier {{ param }}",
+      "updated": "A Materials File is updated with identifier {{ param }}",
+      "deleted": "A Materials File is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Materials File {{ id }}?"
+      },
+      "detail": {
+        "title": "Materials File"
+      },
+      "id": "ID",
+      "materials": "Materials",
+      "materialsFileLoader": "Materials File Loader",
+      "themeFile": "Theme File"
+    }
+  }
+}

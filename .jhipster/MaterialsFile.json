@@ -1,0 +1,33 @@
+{
+  "annotations": {
+    "changelogDate": "20240121062948"
+  },
+  "applications": "*",
+  "entityTableName": "materials_file",
+  "fields": [
+    {
+      "fieldName": "materials",
+      "fieldType": "String"
+    }
+  ],
+  "name": "MaterialsFile",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "materialsFileLoader",
+      "otherEntityRelationshipName": "materialsFile",
+      "relationshipName": "materialsFileLoader",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "themeFile",
+      "otherEntityRelationshipName": "materialsFile",
+      "relationshipName": "themeFile",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

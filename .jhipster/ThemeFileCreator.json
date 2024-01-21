@@ -1,0 +1,23 @@
+{
+  "annotations": {
+    "changelogDate": "20240121063248"
+  },
+  "applications": "*",
+  "entityTableName": "theme_file_creator",
+  "fields": [
+    {
+      "fieldName": "filesAmount",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "ThemeFileCreator",
+  "relationships": [
+    {
+      "otherEntityName": "themeFile",
+      "relationshipName": "themeFile",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

@@ -1,0 +1,25 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "reportSender": {
+      "home": {
+        "title": "Report Senders",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Report Sender",
+        "createOrEditLabel": "Создать или отредактировать Report Sender",
+        "notFound": "Report Senders не найдено"
+      },
+      "created": "Новый Report Sender создан с идентификатором {{ param }}",
+      "updated": "Report Sender обновлен с идентификатором {{ param }}",
+      "deleted": "Report Sender удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Report Sender {{ id }}?"
+      },
+      "detail": {
+        "title": "Report Sender"
+      },
+      "id": "ID",
+      "emailList": "Email List",
+      "testUser": "Test User"
+    }
+  }
+}

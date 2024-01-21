@@ -1,0 +1,38 @@
+{
+  "annotations": {
+    "changelogDate": "20240121063748"
+  },
+  "applications": "*",
+  "entityTableName": "test_user",
+  "fields": [
+    {
+      "fieldName": "marks",
+      "fieldType": "Float"
+    }
+  ],
+  "name": "TestUser",
+  "relationships": [
+    {
+      "otherEntityName": "reportSender",
+      "otherEntityRelationshipName": "testUser",
+      "relationshipName": "reportSender",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "statisticGenerator",
+      "otherEntityRelationshipName": "testUser",
+      "relationshipName": "statisticGenerator",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "testEntity",
+      "otherEntityRelationshipName": "testUser",
+      "relationshipName": "testEntity",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

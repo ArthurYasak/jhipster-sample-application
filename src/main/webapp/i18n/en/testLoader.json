@@ -1,0 +1,25 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "testLoader": {
+      "home": {
+        "title": "Test Loaders",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Test Loader",
+        "createOrEditLabel": "Create or edit a Test Loader",
+        "notFound": "No Test Loaders found"
+      },
+      "created": "A new Test Loader is created with identifier {{ param }}",
+      "updated": "A Test Loader is updated with identifier {{ param }}",
+      "deleted": "A Test Loader is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Test Loader {{ id }}?"
+      },
+      "detail": {
+        "title": "Test Loader"
+      },
+      "id": "ID",
+      "testsAmount": "Tests Amount",
+      "testEntity": "Test Entity"
+    }
+  }
+}

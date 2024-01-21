@@ -1,0 +1,25 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "reportSender": {
+      "home": {
+        "title": "Report Senders",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Report Sender",
+        "createOrEditLabel": "Create or edit a Report Sender",
+        "notFound": "No Report Senders found"
+      },
+      "created": "A new Report Sender is created with identifier {{ param }}",
+      "updated": "A Report Sender is updated with identifier {{ param }}",
+      "deleted": "A Report Sender is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Report Sender {{ id }}?"
+      },
+      "detail": {
+        "title": "Report Sender"
+      },
+      "id": "ID",
+      "emailList": "Email List",
+      "testUser": "Test User"
+    }
+  }
+}

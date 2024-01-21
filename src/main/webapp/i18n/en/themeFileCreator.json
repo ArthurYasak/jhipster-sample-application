@@ -1,0 +1,25 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "themeFileCreator": {
+      "home": {
+        "title": "Theme File Creators",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Theme File Creator",
+        "createOrEditLabel": "Create or edit a Theme File Creator",
+        "notFound": "No Theme File Creators found"
+      },
+      "created": "A new Theme File Creator is created with identifier {{ param }}",
+      "updated": "A Theme File Creator is updated with identifier {{ param }}",
+      "deleted": "A Theme File Creator is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Theme File Creator {{ id }}?"
+      },
+      "detail": {
+        "title": "Theme File Creator"
+      },
+      "id": "ID",
+      "filesAmount": "Files Amount",
+      "themeFile": "Theme File"
+    }
+  }
+}

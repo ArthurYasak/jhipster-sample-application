@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity TestEntity.
+    -->
+    <changeSet id="20240121063348-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="theme_file_id"
+                                 baseTableName="test_entity"
+                                 constraintName="fk_test_entity__theme_file_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="theme_file"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="test_creator_id"
+                                 baseTableName="test_entity"
+                                 constraintName="fk_test_entity__test_creator_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="test_creator"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="test_loader_id"
+                                 baseTableName="test_entity"
+                                 constraintName="fk_test_entity__test_loader_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="test_loader"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="tester_id"
+                                 baseTableName="test_entity"
+                                 constraintName="fk_test_entity__tester_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tester"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="test_entity_id"
+                                 baseTableName="rel_test_entity__test_user"
+                                 constraintName="fk_rel_test_entity__test_user__test_entity_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="test_entity"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="test_user_id"
+                                 baseTableName="rel_test_entity__test_user"
+                                 constraintName="fk_rel_test_entity__test_user__test_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="test_user"
+                                 />
+    </changeSet>
+</databaseChangeLog>

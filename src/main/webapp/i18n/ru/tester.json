@@ -1,0 +1,25 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "tester": {
+      "home": {
+        "title": "Testers",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Tester",
+        "createOrEditLabel": "Создать или отредактировать Tester",
+        "notFound": "Testers не найдено"
+      },
+      "created": "Новый Tester создан с идентификатором {{ param }}",
+      "updated": "Tester обновлен с идентификатором {{ param }}",
+      "deleted": "Tester удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Tester {{ id }}?"
+      },
+      "detail": {
+        "title": "Tester"
+      },
+      "id": "ID",
+      "holdTests": "Hold Tests",
+      "testEntity": "Test Entity"
+    }
+  }
+}

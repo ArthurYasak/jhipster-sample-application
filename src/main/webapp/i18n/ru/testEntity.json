@@ -1,0 +1,30 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "testEntity": {
+      "home": {
+        "title": "Test Entities",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Test Entity",
+        "createOrEditLabel": "Создать или отредактировать Test Entity",
+        "notFound": "Test Entities не найдено"
+      },
+      "created": "Новый Test Entity создан с идентификатором {{ param }}",
+      "updated": "Test Entity обновлен с идентификатором {{ param }}",
+      "deleted": "Test Entity удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Test Entity {{ id }}?"
+      },
+      "detail": {
+        "title": "Test Entity"
+      },
+      "id": "ID",
+      "testPoints": "Test Points",
+      "result": "Result",
+      "themeFile": "Theme File",
+      "testCreator": "Test Creator",
+      "testLoader": "Test Loader",
+      "tester": "Tester",
+      "testUser": "Test User"
+    }
+  }
+}

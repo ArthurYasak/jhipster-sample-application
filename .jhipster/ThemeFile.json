@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "changelogDate": "20240121063148"
+  },
+  "applications": "*",
+  "entityTableName": "theme_file",
+  "fields": [
+    {
+      "fieldName": "theme",
+      "fieldType": "String"
+    }
+  ],
+  "name": "ThemeFile",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "materialsFile",
+      "otherEntityRelationshipName": "themeFile",
+      "relationshipName": "materialsFile",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "themeFileCreator",
+      "otherEntityRelationshipName": "themeFile",
+      "relationshipName": "themeFileCreator",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "testEntity",
+      "otherEntityRelationshipName": "themeFile",
+      "relationshipName": "testEntity",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

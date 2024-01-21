@@ -1,0 +1,25 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "testLoader": {
+      "home": {
+        "title": "Test Loaders",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Test Loader",
+        "createOrEditLabel": "Создать или отредактировать Test Loader",
+        "notFound": "Test Loaders не найдено"
+      },
+      "created": "Новый Test Loader создан с идентификатором {{ param }}",
+      "updated": "Test Loader обновлен с идентификатором {{ param }}",
+      "deleted": "Test Loader удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Test Loader {{ id }}?"
+      },
+      "detail": {
+        "title": "Test Loader"
+      },
+      "id": "ID",
+      "testsAmount": "Tests Amount",
+      "testEntity": "Test Entity"
+    }
+  }
+}

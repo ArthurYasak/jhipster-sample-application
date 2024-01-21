@@ -1,0 +1,27 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "testUser": {
+      "home": {
+        "title": "Test Users",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Test User",
+        "createOrEditLabel": "Create or edit a Test User",
+        "notFound": "No Test Users found"
+      },
+      "created": "A new Test User is created with identifier {{ param }}",
+      "updated": "A Test User is updated with identifier {{ param }}",
+      "deleted": "A Test User is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Test User {{ id }}?"
+      },
+      "detail": {
+        "title": "Test User"
+      },
+      "id": "ID",
+      "marks": "Marks",
+      "reportSender": "Report Sender",
+      "statisticGenerator": "Statistic Generator",
+      "testEntity": "Test Entity"
+    }
+  }
+}

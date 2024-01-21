@@ -1,0 +1,25 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "testCreator": {
+      "home": {
+        "title": "Test Creators",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Test Creator",
+        "createOrEditLabel": "Создать или отредактировать Test Creator",
+        "notFound": "Test Creators не найдено"
+      },
+      "created": "Новый Test Creator создан с идентификатором {{ param }}",
+      "updated": "Test Creator обновлен с идентификатором {{ param }}",
+      "deleted": "Test Creator удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Test Creator {{ id }}?"
+      },
+      "detail": {
+        "title": "Test Creator"
+      },
+      "id": "ID",
+      "testsAmount": "Tests Amount",
+      "testEntity": "Test Entity"
+    }
+  }
+}
