@@ -40,7 +40,7 @@ export const ThemeFileDetail = () => {
           <dt>
             <Translate contentKey="jhipsterSampleApplicationApp.themeFile.materialsFile">Materials File</Translate>
           </dt>
-          <dd>{themeFileEntity.materialsFile ? themeFileEntity.materialsFile.id : ''}</dd>
+          <dd>{themeFileEntity.materialsFile ? themeFileEntity.materialsFile.materials : ''}</dd>
           <dt>
             <Translate contentKey="jhipsterSampleApplicationApp.themeFile.themeFileCreator">Theme File Creator</Translate>
           </dt>

@@ -63,6 +63,10 @@ public class ThemeFileServiceImpl implements ThemeFileService {
         return themeFileRepository.findAll(pageable);
     }
 
+    public Page<ThemeFile> findAllWithEagerRelationships(Pageable pageable) {
+        return themeFileRepository.findAllWithEagerRelationships(pageable);
+    }
+
     /**
      *  Get all the themeFiles where TestEntity is {@code null}.
      *  @return the list of entities.
@@ -80,7 +84,7 @@ public class ThemeFileServiceImpl implements ThemeFileService {
     @Transactional(readOnly = true)
     public Optional<ThemeFile> findOne(Long id) {
         log.debug("Request to get ThemeFile : {}", id);
-        return themeFileRepository.findById(id);
+        return themeFileRepository.findOneWithEagerRelationships(id);
     }
 
     @Override

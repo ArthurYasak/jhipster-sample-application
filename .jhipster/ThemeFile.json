@@ -14,6 +14,7 @@
   "pagination": "pagination",
   "relationships": [
     {
+      "otherEntityField": "materials",
       "otherEntityName": "materialsFile",
       "otherEntityRelationshipName": "themeFile",
       "relationshipName": "materialsFile",
@@ -28,6 +29,7 @@
       "relationshipType": "many-to-one"
     },
     {
+      "otherEntityField": "question",
       "otherEntityName": "testEntity",
       "otherEntityRelationshipName": "themeFile",
       "relationshipName": "testEntity",
