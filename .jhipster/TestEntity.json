@@ -6,12 +6,16 @@
   "entityTableName": "test_entity",
   "fields": [
     {
+      "fieldName": "question",
+      "fieldType": "String"
+    },
+    {
       "fieldName": "testPoints",
       "fieldType": "String"
     },
     {
       "fieldName": "result",
-      "fieldType": "String"
+      "fieldType": "Integer"
     }
   ],
   "name": "TestEntity",

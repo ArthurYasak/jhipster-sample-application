@@ -15,8 +15,9 @@ entity ThemeFileCreator {
 }
 
 entity TestEntity {
+	question String
 	testPoints String
-    result String 
+    result Integer 
 }
 
 entity TestLoader {

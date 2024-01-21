@@ -18,6 +18,7 @@
         "title": "Test Entity"
       },
       "id": "ID",
+      "question": "Question",
       "testPoints": "Test Points",
       "result": "Result",
       "themeFile": "Theme File",

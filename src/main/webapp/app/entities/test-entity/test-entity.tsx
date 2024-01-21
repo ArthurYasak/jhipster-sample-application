@@ -114,6 +114,10 @@ export const TestEntity = () => {
                   <Translate contentKey="jhipsterSampleApplicationApp.testEntity.id">ID</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('id')} />
                 </th>
+                <th className="hand" onClick={sort('question')}>
+                  <Translate contentKey="jhipsterSampleApplicationApp.testEntity.question">Question</Translate>{' '}
+                  <FontAwesomeIcon icon={getSortIconByFieldName('question')} />
+                </th>
                 <th className="hand" onClick={sort('testPoints')}>
                   <Translate contentKey="jhipsterSampleApplicationApp.testEntity.testPoints">Test Points</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('testPoints')} />
@@ -148,6 +152,7 @@ export const TestEntity = () => {
                       {testEntity.id}
                     </Button>
                   </td>
+                  <td>{testEntity.question}</td>
                   <td>{testEntity.testPoints}</td>
                   <td>{testEntity.result}</td>
                   <td>

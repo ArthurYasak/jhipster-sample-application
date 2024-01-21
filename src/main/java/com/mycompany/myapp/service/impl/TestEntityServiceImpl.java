@@ -45,6 +45,9 @@ public class TestEntityServiceImpl implements TestEntityService {
         return testEntityRepository
             .findById(testEntity.getId())
             .map(existingTestEntity -> {
+                if (testEntity.getQuestion() != null) {
+                    existingTestEntity.setQuestion(testEntity.getQuestion());
+                }
                 if (testEntity.getTestPoints() != null) {
                     existingTestEntity.setTestPoints(testEntity.getTestPoints());
                 }

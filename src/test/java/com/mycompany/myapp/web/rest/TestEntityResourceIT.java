@@ -38,11 +38,14 @@ import org.springframework.transaction.annotation.Transactional;
 @WithMockUser
 class TestEntityResourceIT {
 
+    private static final String DEFAULT_QUESTION = "AAAAAAAAAA";
+    private static final String UPDATED_QUESTION = "BBBBBBBBBB";
+
     private static final String DEFAULT_TEST_POINTS = "AAAAAAAAAA";
     private static final String UPDATED_TEST_POINTS = "BBBBBBBBBB";
 
-    private static final String DEFAULT_RESULT = "AAAAAAAAAA";
-    private static final String UPDATED_RESULT = "BBBBBBBBBB";
+    private static final Integer DEFAULT_RESULT = 1;
+    private static final Integer UPDATED_RESULT = 2;
 
     private static final String ENTITY_API_URL = "/api/test-entities";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
@@ -74,7 +77,7 @@ class TestEntityResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static TestEntity createEntity(EntityManager em) {
-        TestEntity testEntity = new TestEntity().testPoints(DEFAULT_TEST_POINTS).result(DEFAULT_RESULT);
+        TestEntity testEntity = new TestEntity().question(DEFAULT_QUESTION).testPoints(DEFAULT_TEST_POINTS).result(DEFAULT_RESULT);
         return testEntity;
     }
 
@@ -85,7 +88,7 @@ class TestEntityResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static TestEntity createUpdatedEntity(EntityManager em) {
-        TestEntity testEntity = new TestEntity().testPoints(UPDATED_TEST_POINTS).result(UPDATED_RESULT);
+        TestEntity testEntity = new TestEntity().question(UPDATED_QUESTION).testPoints(UPDATED_TEST_POINTS).result(UPDATED_RESULT);
         return testEntity;
     }
 
@@ -107,6 +110,7 @@ class TestEntityResourceIT {
         List<TestEntity> testEntityList = testEntityRepository.findAll();
         assertThat(testEntityList).hasSize(databaseSizeBeforeCreate + 1);
         TestEntity testTestEntity = testEntityList.get(testEntityList.size() - 1);
+        assertThat(testTestEntity.getQuestion()).isEqualTo(DEFAULT_QUESTION);
         assertThat(testTestEntity.getTestPoints()).isEqualTo(DEFAULT_TEST_POINTS);
         assertThat(testTestEntity.getResult()).isEqualTo(DEFAULT_RESULT);
     }
@@ -141,6 +145,7 @@ class TestEntityResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(testEntity.getId().intValue())))
+            .andExpect(jsonPath("$.[*].question").value(hasItem(DEFAULT_QUESTION)))
             .andExpect(jsonPath("$.[*].testPoints").value(hasItem(DEFAULT_TEST_POINTS)))
             .andExpect(jsonPath("$.[*].result").value(hasItem(DEFAULT_RESULT)));
     }
@@ -174,6 +179,7 @@ class TestEntityResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(testEntity.getId().intValue()))
+            .andExpect(jsonPath("$.question").value(DEFAULT_QUESTION))
             .andExpect(jsonPath("$.testPoints").value(DEFAULT_TEST_POINTS))
             .andExpect(jsonPath("$.result").value(DEFAULT_RESULT));
     }
@@ -197,7 +203,7 @@ class TestEntityResourceIT {
         TestEntity updatedTestEntity = testEntityRepository.findById(testEntity.getId()).orElseThrow();
         // Disconnect from session so that the updates on updatedTestEntity are not directly saved in db
         em.detach(updatedTestEntity);
-        updatedTestEntity.testPoints(UPDATED_TEST_POINTS).result(UPDATED_RESULT);
+        updatedTestEntity.question(UPDATED_QUESTION).testPoints(UPDATED_TEST_POINTS).result(UPDATED_RESULT);
 
         restTestEntityMockMvc
             .perform(
@@ -211,6 +217,7 @@ class TestEntityResourceIT {
         List<TestEntity> testEntityList = testEntityRepository.findAll();
         assertThat(testEntityList).hasSize(databaseSizeBeforeUpdate);
         TestEntity testTestEntity = testEntityList.get(testEntityList.size() - 1);
+        assertThat(testTestEntity.getQuestion()).isEqualTo(UPDATED_QUESTION);
         assertThat(testTestEntity.getTestPoints()).isEqualTo(UPDATED_TEST_POINTS);
         assertThat(testTestEntity.getResult()).isEqualTo(UPDATED_RESULT);
     }
@@ -283,7 +290,7 @@ class TestEntityResourceIT {
         TestEntity partialUpdatedTestEntity = new TestEntity();
         partialUpdatedTestEntity.setId(testEntity.getId());
 
-        partialUpdatedTestEntity.result(UPDATED_RESULT);
+        partialUpdatedTestEntity.testPoints(UPDATED_TEST_POINTS).result(UPDATED_RESULT);
 
         restTestEntityMockMvc
             .perform(
@@ -297,7 +304,8 @@ class TestEntityResourceIT {
         List<TestEntity> testEntityList = testEntityRepository.findAll();
         assertThat(testEntityList).hasSize(databaseSizeBeforeUpdate);
         TestEntity testTestEntity = testEntityList.get(testEntityList.size() - 1);
-        assertThat(testTestEntity.getTestPoints()).isEqualTo(DEFAULT_TEST_POINTS);
+        assertThat(testTestEntity.getQuestion()).isEqualTo(DEFAULT_QUESTION);
+        assertThat(testTestEntity.getTestPoints()).isEqualTo(UPDATED_TEST_POINTS);
         assertThat(testTestEntity.getResult()).isEqualTo(UPDATED_RESULT);
     }
 
@@ -313,7 +321,7 @@ class TestEntityResourceIT {
         TestEntity partialUpdatedTestEntity = new TestEntity();
         partialUpdatedTestEntity.setId(testEntity.getId());
 
-        partialUpdatedTestEntity.testPoints(UPDATED_TEST_POINTS).result(UPDATED_RESULT);
+        partialUpdatedTestEntity.question(UPDATED_QUESTION).testPoints(UPDATED_TEST_POINTS).result(UPDATED_RESULT);
 
         restTestEntityMockMvc
             .perform(
@@ -327,6 +335,7 @@ class TestEntityResourceIT {
         List<TestEntity> testEntityList = testEntityRepository.findAll();
         assertThat(testEntityList).hasSize(databaseSizeBeforeUpdate);
         TestEntity testTestEntity = testEntityList.get(testEntityList.size() - 1);
+        assertThat(testTestEntity.getQuestion()).isEqualTo(UPDATED_QUESTION);
         assertThat(testTestEntity.getTestPoints()).isEqualTo(UPDATED_TEST_POINTS);
         assertThat(testTestEntity.getResult()).isEqualTo(UPDATED_RESULT);
     }
